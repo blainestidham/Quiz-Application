@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Quiz App</title>
+
+        <link rel="stylesheet" href="styles.css" />
+
+      <!-- External JS library (CDN): SweetAlert2 -->
+       <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+       <script defer src="app.js"></script>
+    </head>
+
+    <body>
+        <main class="card">
+          <header class="header">
+            <h1>Quiz Application</h1>
+            <div class="score">
+                <span>Correct: <strong id="correctCount">0</strong></span>
+                <span>Incorrect: <strong id="incorrectCount">0</strong></span>
+            </div>
+          </header>
+       
+       <section class="progress">
+        <span id="questionNumber">Question 1</span>
+        <span id="questionTotal">of 5</span>
+       </section>
+
+       <section class="question-area">
+        <h2 id="questionText">Loading...</h2>
+        <form id="answersForm" class="answers"></form>
+       </section>
+
+       <section class="buttons">
+        <button id="checkBtn" type="button">Check Answer</button>
+        <button id="nextBtn" type="button" disabled>Next Question</button>
+       </section>
+
+       <section id="feedback" class="feedback" aria-live="polite"></section>
+        </main>
+    </body>
+</html>
